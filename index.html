@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ojasvi</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: #ffe4ec;
+      color: #2b2b2b;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 750px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+
+    .heart {
+      font-size: 50px;
+      animation: beat 1s infinite;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+
+    .text {
+      text-align: left;
+      background: rgba(255,255,255,0.85);
+      padding: 25px;
+      border-radius: 12px;
+      margin-top: 25px;
+      line-height: 1.7;
+    }
+
+    button {
+      padding: 12px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #ff6f91;
+      color: white;
+      cursor: pointer;
+      margin: 10px;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff3e6c;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 1.2em;
+      display: none;
+    }
+
+    #noBtn {
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="heart">❤️</div>
+    <h1>Ojasvi, I’m sorry.</h1>
+
+    <div class="text">
+      <p>I didn’t show up.</p>
+      <p>And I know that’s the part that actually matters.</p>
+      <p>You were handling Tarang, probably running around fixing a hundred things at once, and I just wasn’t there. I should’ve been.</p>
+      <p>I keep thinking about how calm everything feels with you. Metro, cabs, autos, it doesn’t matter. My head just shuts up for a while.</p>
+      <p>And even after knowing that, I still managed to mess this up.</p>
+      <p>I am really proud of you. For exactly this. For handling something like that the way you did. I should’ve been there to see it.</p>
+      <p>I know I’ve been inconsistent. Cancelling. Pissing you off. Not showing up the way I should.</p>
+      <p>And I don’t want to be the person who understands all this, can say it properly, but still doesn’t change it.</p>
+      <p>I don’t want something easy with you. I want something real. And that only works if I actually act like you matter.</p>
+      <p>I’m sorry. Properly.</p>
+    </div>
+
+    <h2>Can we still do this?</h2>
+
+    <button onclick="forgive()">Yes ❤️</button>
+    <button id="noBtn" onmouseover="moveButton()">No 😡</button>
+
+    <div id="message">
+      I’ll do better. Not just say it, prove it.
+    </div>
+  </div>
+
+  <script>
+    function forgive() {
+      document.getElementById("message").style.display = "block";
+    }
+
+    function moveButton() {
+      const btn = document.getElementById("noBtn");
+      const x = Math.random() * (window.innerWidth - btn.offsetWidth);
+      const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+      btn.style.position = "absolute";
+      btn.style.left = x + "px";
+      btn.style.top = y + "px";
+    }
+  </script>
+</body>
+</html>
