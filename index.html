@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ojasvi</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
@@ -22,7 +23,7 @@
     }
 
     .heart {
-      font-size: 50px;
+      font-size: 55px;
       animation: beat 1s infinite;
     }
 
@@ -36,37 +37,44 @@
       }
     }
 
-    /* ONLY THESE TWO HEADINGS ARE BEIGE */
+    /* Beige headings only */
     h1,
     h2 {
       color: #F5F5DC;
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 2.7em;
+      margin-bottom: 20px;
     }
 
+    h2 {
+      margin-top: 30px;
+      font-size: 2em;
+    }
+
+    /* Main apology text box */
     .text {
       text-align: left;
-      background: rgba(255, 255, 255, 0.88);
-      color: #3b1f1f;
-      padding: 25px;
-      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.85);
+      color: #000000; /* BLACK TEXT */
+      padding: 30px;
+      border-radius: 14px;
       margin-top: 25px;
-      line-height: 1.7;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      line-height: 1.8;
+      font-size: 1.1em;
+      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.25);
     }
 
     button {
-      padding: 12px 20px;
+      padding: 12px 22px;
       font-size: 16px;
       border: none;
       border-radius: 8px;
       background-color: #ff6f91;
       color: white;
       cursor: pointer;
-      margin: 10px;
+      margin: 12px;
       transition: 0.3s ease;
     }
 
@@ -77,9 +85,9 @@
 
     #message {
       margin-top: 20px;
-      font-size: 1.5em;
-      display: none;
+      font-size: 1.6em;
       color: #F5F5DC;
+      display: none;
     }
 
     #noBtn {
@@ -94,45 +102,42 @@
 
     <div class="heart">❤️</div>
 
-    <h1>
-      Ojo, I am really really sorry.
-    </h1>
+    <h1>Ojo, I am really really sorry.</h1>
 
     <div class="text">
       <p>
         The past few weeks have not been the best of times.
-        If anything, they have been times where I let you down.
+        If anything, they have been times where I have let you down.
       </p>
 
       <p>
-        And this is not something I ever wanted to do.
-        I recognise that I have been genuinely pathetic on my part.
-        When you were trying to figure things out, I only added pressure,
-        drama, and confusion — when I should have been peace for you instead.
+        And this is not something I really wanted to do,
+        and I do recognise that I have been really pathetic on my part.
+        When you were trying to figure things out,
+        I was just troubling you and making things dramatic for you,
+        when I should have been a soothing sensation for you.
       </p>
 
       <p>
-        The worst part is that it took me this long to realise it.
-        It should never have reached this point in the first place.
+        And the worst part is that it took me so long to realise this.
+        It should not have been so in the first place.
       </p>
 
       <p>
-        But now that I finally do understand it,
+        But now that I have come to realise it,
         I genuinely seek forgiveness from you.
       </p>
 
       <p>
-        And lastly, all I want to say is this:
-        you truly are one of the best people in this whole damn world.
-        Maybe you do not see that right now,
-        but someday, after seeing enough of the world,
-        I hope you do.
+        Lastly, all I want to say is:
+        you are indeed the best in this whole damn world.
+        You may not know this right now,
+        but someday, after we have seen enough of the world,
+        I hope you truly do.
       </p>
     </div>
 
-    <h2>
-      To forgive or not to forgive, that is the question.
-    </h2>
+    <h2>To forgive or not to forgive, that is the question.</h2>
 
     <button onclick="forgive()">
       Perhaps.
@@ -166,4 +171,5 @@
   </script>
 
 </body>
+
 </html>
