@@ -4,13 +4,15 @@
   <meta charset="UTF-8">
   <title>Ojasvi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
-      font-family: 'Georgia', serif;
+      font-family: Georgia, serif;
       background: #800020;
       color: #F5F5DC;
       text-align: center;
+      overflow-x: hidden;
     }
 
     .container {
@@ -19,28 +21,41 @@
       padding: 40px 20px;
     }
 
-    h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-
     .heart {
       font-size: 50px;
       animation: beat 1s infinite;
     }
 
     @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.2); }
+      0%, 100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    /* ONLY THESE TWO HEADINGS ARE BEIGE */
+    h1,
+    h2 {
+      color: #F5F5DC;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
     }
 
     .text {
       text-align: left;
-      background: rgba(255,255,255,0.85);
+      background: rgba(255, 255, 255, 0.88);
+      color: #3b1f1f;
       padding: 25px;
       border-radius: 12px;
       margin-top: 25px;
       line-height: 1.7;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
     }
 
     button {
@@ -52,17 +67,19 @@
       color: white;
       cursor: pointer;
       margin: 10px;
-      transition: 0.3s;
+      transition: 0.3s ease;
     }
 
     button:hover {
       background-color: #ff3e6c;
+      transform: scale(1.05);
     }
 
     #message {
       margin-top: 20px;
-      font-size: 1.2em;
+      font-size: 1.5em;
       display: none;
+      color: #F5F5DC;
     }
 
     #noBtn {
@@ -72,26 +89,63 @@
 </head>
 
 <body>
+
   <div class="container">
+
     <div class="heart">❤️</div>
-    <h1>Ojo, I am really really sorry.</h1>
+
+    <h1>
+      Ojo, I am really really sorry.
+    </h1>
 
     <div class="text">
-      <p>The past few week have not been the best of times. If anything, it has been of times where I have let you down.</p>
-      <p>And this is not something I really wanted to do, and I do recognise that I have been really pathetic on my part. When you were trying to figure things out, I was just troubling you, and making things dramatic for you, when I should have been a soothing sensation for you.</p>
-      <p>And the worst part is that it took me so long to realise this. It shouldn't have been so in the first place.</p>
-      <p>But now that I have come to realise it, I genuinely seek forgiveness from you.</p>
-      <p>Lastly, all I want to say is, you are indeed the best in this whole damn world. You won't know this right now, but, someday, I hope that when we've seen the world enough, you do feel so.</p>
+      <p>
+        The past few weeks have not been the best of times.
+        If anything, they have been times where I let you down.
+      </p>
+
+      <p>
+        And this is not something I ever wanted to do.
+        I recognise that I have been genuinely pathetic on my part.
+        When you were trying to figure things out, I only added pressure,
+        drama, and confusion — when I should have been peace for you instead.
+      </p>
+
+      <p>
+        The worst part is that it took me this long to realise it.
+        It should never have reached this point in the first place.
+      </p>
+
+      <p>
+        But now that I finally do understand it,
+        I genuinely seek forgiveness from you.
+      </p>
+
+      <p>
+        And lastly, all I want to say is this:
+        you truly are one of the best people in this whole damn world.
+        Maybe you do not see that right now,
+        but someday, after seeing enough of the world,
+        I hope you do.
+      </p>
     </div>
 
-    <h2>To forgive or not to forgive, that is the question.</h2>
+    <h2>
+      To forgive or not to forgive, that is the question.
+    </h2>
 
-    <button onclick="forgive()">Perhaps.</button>
-    <button id="noBtn" onmouseover="moveButton()">Nope.</button>
+    <button onclick="forgive()">
+      Perhaps.
+    </button>
+
+    <button id="noBtn" onmouseover="moveButton()">
+      Nope.
+    </button>
 
     <div id="message">
-      <3
+      ❤️
     </div>
+
   </div>
 
   <script>
@@ -101,12 +155,15 @@
 
     function moveButton() {
       const btn = document.getElementById("noBtn");
+
       const x = Math.random() * (window.innerWidth - btn.offsetWidth);
       const y = Math.random() * (window.innerHeight - btn.offsetHeight);
+
       btn.style.position = "absolute";
       btn.style.left = x + "px";
       btn.style.top = y + "px";
     }
   </script>
+
 </body>
 </html>
