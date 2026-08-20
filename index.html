@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Six Months, Ojo 🍫</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,500&family=Karla:wght@400;500;600;700&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ======================================================================
+  HOW TO USE THIS SITE — read me first
+  1. Search for "EDIT:" comments — every one marks text or an image you
+     should personalise. Ctrl+F / Cmd+F "EDIT:" to jump through them all.
+  2. Photos live in the /images folder. Drop your pictures in there, then
+     add them to the `photos` array in script.js (very top of the file).
+     Each photo needs a filename + one short line under it.
+  3. Open index.html in your browser any time to preview changes.
+  4. To publish: push this folder to a GitHub repo, then turn on
+     GitHub Pages (Settings → Pages → deploy from main branch). Full
+     steps are in README.md.
+=========================================================================== -->
+
+<!-- decorative eye that blinks + watches the cursor, our little motif -->
+<div class="cursor-eye" id="cursorEye" aria-hidden="true">
+  <svg viewBox="0 0 100 60" width="46" height="28">
+    <path class="eye-lid" d="M2,30 Q50,-10 98,30 Q50,70 2,30 Z" />
+    <circle class="eye-iris" cx="50" cy="30" r="14"/>
+    <circle class="eye-pupil" id="eyePupil" cx="50" cy="30" r="6"/>
+  </svg>
+</div>
+
+<!-- floating hearts / confetti layer for the surprise button -->
+<div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+<!-- ============================ NAV DOTS ============================ -->
+<nav class="dot-nav" aria-label="Page sections">
+  <a href="#hero" data-label="hello"></a>
+  <a href="#story" data-label="us"></a>
+  <a href="#gallery" data-label="photos"></a>
+  <a href="#reasons" data-label="little things"></a>
+  <a href="#spot" data-label="our spot"></a>
+  <a href="#secret" data-label="ojo, look"></a>
+  <a href="#surprise" data-label="surprise"></a>
+</nav>
+
+<!-- ============================ HERO ================================ -->
+<section id="hero" class="hero">
+  <div class="steam" aria-hidden="true">
+    <span></span><span></span><span></span>
+  </div>
+  <svg class="mug" width="70" height="70" viewBox="0 0 100 100" aria-hidden="true">
+    <path d="M20,35 h50 v30 a25,25 0 0 1 -25,25 h0 a25,25 0 0 1 -25,-25 Z" fill="#3B2620"/>
+    <path d="M70,45 q18,0 18,15 q0,15 -18,15" fill="none" stroke="#3B2620" stroke-width="6"/>
+  </svg>
+
+  <p class="eyebrow">six months of us — a little site, just for you</p>
+
+  <!-- EDIT: her name / the headline, if you want to change the wording -->
+  <h1 class="hero-title">Hi Ojo,<br><span>happy 6 months.</span></h1>
+
+  <!-- EDIT: your one-line dedication under the headline -->
+  <p class="hero-sub">Every cup of hot chocolate tastes better because you're across the table. Here's six months, kept safe in one place — scroll down.</p>
+
+  <button class="btn btn-primary" id="scrollDown">keep scrolling <span class="arrow">↓</span></button>
+</section>
+
+<!-- ============================ OUR STORY =========================== -->
+<section id="story" class="story">
+  <p class="section-eyebrow">the timeline</p>
+  <h2 class="section-title">Six months, month by month</h2>
+  <p class="section-note">EDIT: replace each line below with your real memory from that month — the messier and more specific, the better.</p>
+
+  <ol class="timeline" id="timelineList">
+    <!-- Populated from the `timeline` array in script.js.
+         EDIT the `timeline` array at the top of script.js to change these. -->
+  </ol>
+</section>
+
+<!-- ============================ GALLERY ============================= -->
+<section id="gallery" class="gallery">
+  <p class="section-eyebrow">us, in pictures</p>
+  <h2 class="section-title">Every photo has a caption. You write it.</h2>
+  <p class="section-note">
+    EDIT: put your images inside the <code>/images</code> folder, then open
+    <code>script.js</code> and edit the <code>photos</code> array at the very
+    top — add as many entries as you like, each with a filename and a
+    one-line caption. The grid below fills itself in automatically.
+  </p>
+
+  <div class="photo-grid" id="photoGrid">
+    <!-- Populated from the `photos` array in script.js -->
+  </div>
+</section>
+
+<!-- ============================ REASONS ============================= -->
+<section id="reasons" class="reasons">
+  <p class="section-eyebrow">little things</p>
+  <h2 class="section-title">Reasons, filed one per card. Tap to flip.</h2>
+  <p class="section-note">EDIT: change the `reasons` array in script.js — put in your real, specific reasons. The ones here are just placeholders to show the shape.</p>
+
+  <div class="card-grid" id="reasonGrid">
+    <!-- Populated from the `reasons` array in script.js -->
+  </div>
+</section>
+
+<!-- ============================ OUR SPOT ============================= -->
+<section id="spot" class="spot">
+  <div class="spot-card">
+    <div class="spot-steam" aria-hidden="true"><span></span><span></span><span></span></div>
+    <p class="section-eyebrow light">our regular order</p>
+    <h2 class="spot-title">Two hot chocolates, table for two, Shagun.</h2>
+    <!-- EDIT: this paragraph — tell the story of your spot, your order,
+         an inside joke about the place, whatever makes it yours. -->
+    <p class="spot-text">
+      Some restaurants are just restaurants. Shagun is ours — the place we keep
+      going back to, where the hot chocolate is always the first thing we
+      order and the last thing we finish talking about. This is the part of
+      the site where you write the actual story: how we found it, what we
+      always order, the joke the waiter doesn't get, all of it.
+    </p>
+    <p class="spot-tag">📍 Shagun · our table, if it's free</p>
+  </div>
+</section>
+
+<!-- ============================ SECRET NOTE ========================== -->
+<section id="secret" class="secret">
+  <p class="section-eyebrow">ojo, look here</p>
+  <h2 class="section-title">Eyes are for looking. So look.</h2>
+  <p class="section-note">Click the eye. It's watching you already.</p>
+
+  <button class="eye-button" id="secretEyeBtn" aria-expanded="false">
+    <svg viewBox="0 0 160 100" width="140" height="90">
+      <path class="eye-lid" d="M4,50 Q80,-16 156,50 Q80,116 4,50 Z"/>
+      <circle class="eye-iris" cx="80" cy="50" r="22"/>
+      <circle class="eye-pupil" cx="80" cy="50" r="10"/>
+    </svg>
+    <span class="eye-hint">tap</span>
+  </button>
+
+  <!-- EDIT: this hidden message — your real secret note to her -->
+  <div class="secret-note" id="secretNote" hidden>
+    <p>
+      Ojo — this is the part only you get to read. Write something here that
+      you'd never text her: what you noticed about her in month one that you
+      still notice now, what you're looking forward to, anything. Replace
+      this placeholder in the <code>#secretNote</code> block of index.html.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ SURPRISE ============================= -->
+<section id="surprise" class="surprise">
+  <p class="section-eyebrow">last one</p>
+  <h2 class="section-title">One more button. Promise it's worth it.</h2>
+  <button class="btn btn-confetti" id="surpriseBtn">press for a surprise 🎉</button>
+  <!-- EDIT: swap these lines for messages you actually want to send her —
+       add or remove as many as you like in the `surprises` array in script.js -->
+  <p class="surprise-message" id="surpriseMessage" hidden></p>
+</section>
+
+<!-- ============================ FOOTER ================================ -->
+<footer class="footer">
+  <p>
+    <!-- EDIT: your name -->
+    made by <span class="handwritten">[Your Name]</span>, for Ojasvi — my Ojo.
+  </p>
+  <p class="footer-sub">6 months down. Here's to the rest.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
